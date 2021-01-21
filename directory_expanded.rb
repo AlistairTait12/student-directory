@@ -37,7 +37,7 @@ def print_header
 end
 
 def print_names(names)
-  names.each {|name| puts "#{name[:name]} (#{name[:cohort]} cohort)"}
+  names.each_with_index {|name, i| puts "#{i + 1}. #{name[:name]} (#{name[:cohort]} cohort)"}
 end
 
 def print_footer(names)
